@@ -13,7 +13,7 @@ function timeDiffer(date1, date2) { // Find the difference between two dates out
     return Math.floor(difference/1000);
 }
 
-async function mine(i) {
+function mine(i) {
     const timeStarted = Date.now();
     let timeElapsed = 0;
     console.log("╭───────────────EasyPlum 1.0───────────────╮"); // Template data that will be overwrote later
