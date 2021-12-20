@@ -29,7 +29,7 @@ function mine(i) {
         process.stdout.write("\033[1A \r" + `│ Time Elapsed: ${timeElapsed}s`.padEnd(43, ' ') + "│\n")
         process.stdout.write("\033[2A \r" + `│ Iteration: ${iteration}`.padEnd(43, ' ') + "│\n\n")
         process.stdout.write("\033[3A \r│ MD5:   " + md5 + "  │\n\n\n"); // No need to pad the value as the length is fixed
-        process.stdout.write("\033[4A \r" + `| Nonce: ${i}`.padEnd(43, ' ') + "│\n\n\n\n")
+        process.stdout.write("\033[4A \r" + `│ Nonce: ${i}`.padEnd(43, ' ') + "│\n\n\n\n")
         if(md5.substring(0,4) === '0000' && md5.substring(md5.length - 2) === '00') { // If the first 4 digits of the hash are 0 and the last 2 digits are 0 then proof of work is complete
             console.log("\nCompleted!")
             return;
